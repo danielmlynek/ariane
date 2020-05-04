@@ -374,7 +374,7 @@ sim: build
 
 sim_riviera: build_riviera
 	vsim +permissive $(riviera-flags) $(riviera-cmd) -lib $(library) +MAX_CYCLES=$(max_cycles) +UVM_TESTNAME=$(test_case) \
-	+BASEDIR=$(riscv-test-dir) $(uvm-flags) -sv_lib $(RISCV)/lib/libfesvr.so -sv_lib $(dpi-library)/ariane_dpi  \
+	+BASEDIR=$(riscv-test-dir) $(uvm-flags) -sv_lib tb/riscv-isa-sim/install/lib/libfesvr.so -sv_lib $(dpi-library)/ariane_dpi  \
 	${top_level} +permissive-off ++$(elf-bin) ++$(target-options) | tee sim.log
 
 ifeq ($(simulator), RIVIERA)
