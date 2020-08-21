@@ -831,4 +831,5 @@ package ariane_pkg;
             default:     return 2'b11;
         endcase
     endfunction
+
 endpackage
